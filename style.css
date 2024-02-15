@@ -1,62 +1,42 @@
 body{
-    background-color: goldenrod;
-    margin-block: 20px;
-    
-    
-
+    background-color: yellow;
 }
-
 .h1{
-   text-align: center;
-    width: 20%;
-    padding: 15px;
-    border: solid black 2px;
-    margin-left:45%;
-    background-color: aliceblue;
-    
-   
-
-}
-
-.column{
-   float: left;
-    width: 30%;
-    padding: 15px;
-    border: solid black 2px;
-    margin-left: 45%;
-    text-align: center;
-    background-color: aliceblue;
-    
-    
-}
-
-
-  .row::after {
-    content: " ";
-    display: table;
-    clear: both;
+    background-color: white;
+    width: 119px;
+      margin-top: 10%;
+    padding: 0;
+        border: solid black;
+       display: grid;
+       align-items: center;
   }
-
-  
-
-
-  @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
-    .column {
+  .column{
+    background-color: white;
+   width: 260px;
+      margin-top: 2%;
+        padding: 20px;
+        border: solid black;
+      text-align: left;
         display: grid;
-        grid-template-areas:
-          'box1'
-          'box2'
-          'box3'
-          'box4'
-          'box5'
-          'box6';
-      }
-      .h1{
-        column {
-          display: grid;
-      }
+      
+  }
+ 
+  .row{
+    display: grid;
+    gap: 10px 0;
+    grid-template-columns: auto auto auto auto auto;
+   
+      margin-left: 20%;
 
   }
-    
 
-  }
+/* Media query for screens smaller than 1440px */
+@media only screen and (max-width: 1439px) {
+    .row {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+    .h1 {
+        width: 100%; /* Full width for the header on smaller screens */
+        margin-left: 0; /* Remove margin-left on smaller screens */
+    }
+}
