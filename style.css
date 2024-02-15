@@ -1,0 +1,62 @@
+body{
+    background-color: goldenrod;
+    margin-block: 20px;
+    
+    
+
+}
+
+.h1{
+   text-align: center;
+    width: 20%;
+    padding: 15px;
+    border: solid black 2px;
+    margin-left:45%;
+    background-color: aliceblue;
+    
+   
+
+}
+
+.column{
+   float: left;
+    width: 30%;
+    padding: 15px;
+    border: solid black 2px;
+    margin-left: 45%;
+    text-align: center;
+    background-color: aliceblue;
+    
+    
+}
+
+
+  .row::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+  
+
+
+  @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+    .column {
+        display: grid;
+        grid-template-areas:
+          'box1'
+          'box2'
+          'box3'
+          'box4'
+          'box5'
+          'box6';
+      }
+      .h1{
+        column {
+          display: grid;
+      }
+
+  }
+    
+
+  }
